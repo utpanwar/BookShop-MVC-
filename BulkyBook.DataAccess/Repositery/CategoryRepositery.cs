@@ -12,7 +12,7 @@ namespace BulkyBook.DataAccess.Repositery.IRepositery
         private readonly ApplicationDbContext _db;
         public CategoryRepositery(ApplicationDbContext db) : base(db)
         {
-                
+            _db = db;
         }
 
         public void update(Category category)

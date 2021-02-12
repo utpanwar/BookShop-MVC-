@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BulkyBook.DataAccess.Repositery.IRepositery
 {
-    interface ICategoryRepositery : IRepositery<Category>
+    public interface ICategoryRepositery : IRepositery<Category>
     {
         public void update(Category category);
 
