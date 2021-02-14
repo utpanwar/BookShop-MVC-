@@ -1,4 +1,5 @@
-﻿using BulkyBook.DataAccess.Repository.IRepository;
+﻿using BulkyBook.DataAccess.Repository;
+using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,6 +13,7 @@ namespace BookShop.Areas.Admin.Controllers
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly UnitOfWork unitOfWorks;
         public CategoryController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -28,7 +30,8 @@ namespace BookShop.Areas.Admin.Controllers
                 return View(category);
             }
             category = _unitOfWork.Category.Get(id.GetValueOrDefault());
-            if(category == null)
+                       _unitOfWork.Category.update(category);
+            if (category == null)
             {
                 return NotFound();
             }
@@ -41,7 +44,10 @@ namespace BookShop.Areas.Admin.Controllers
         public IActionResult GetAll()
         {
             var allObj = _unitOfWork.Category.GetAll();
-            //var allObj = _unitOfWork.
+            var allObj2 = unitOfWorks.Category.GetAll();
+            var d = unitOfWorks.slim;
+            var a = _unitOfWork.Name;
+             _unitOfWork.MyProperty = 10;
             return Json(new { data = allObj});
         }
         #endregion
