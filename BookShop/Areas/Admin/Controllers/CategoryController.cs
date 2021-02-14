@@ -13,7 +13,6 @@ namespace BookShop.Areas.Admin.Controllers
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly UnitOfWork unitOfWorks;
         public CategoryController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -44,10 +43,6 @@ namespace BookShop.Areas.Admin.Controllers
         public IActionResult GetAll()
         {
             var allObj = _unitOfWork.Category.GetAll();
-            var allObj2 = unitOfWorks.Category.GetAll();
-            var d = unitOfWorks.slim;
-            var a = _unitOfWork.Name;
-             _unitOfWork.MyProperty = 10;
             return Json(new { data = allObj});
         }
         #endregion

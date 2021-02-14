@@ -35,7 +35,7 @@ namespace BulkyBook.DataAccess.Repository
         public ISP_Call SP_Call { get; }
 
         public Repositery<Category> MyPropertys { get ; set; }
-        int IUnitOfWork.MyProperty { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+      
 
         //public ICompanyRepository Company { get; private set; }
         //public IProductRepository Product { get; private set; }
