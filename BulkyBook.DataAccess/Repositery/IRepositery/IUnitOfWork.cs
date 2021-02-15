@@ -9,7 +9,7 @@ namespace BulkyBook.DataAccess.Repository.IRepository
     {
          ICategoryRepositery Category { get; }
          ICoverTypeRepository CoverType { get; }
-        //IProductRepository Product { get; }
+        IProductRepositery Product { get; }
         //ICompanyRepository Company { get; }
         //IApplicationUserRepository ApplicationUser { get; }
         ISP_Call SP_Call { get; } 
