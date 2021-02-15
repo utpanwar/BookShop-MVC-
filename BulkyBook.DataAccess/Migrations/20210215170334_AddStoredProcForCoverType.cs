@@ -9,14 +9,14 @@ namespace BulkyBook.DataAccess.Migrations
             migrationBuilder.Sql(@"CREATE PROC usp_GetCoverTypes 
                                     AS 
                                     BEGIN 
-                                     SELECT * FROM   dbo.CoverTypes 
+                                     SELECT * FROM   dbo.CoverType 
                                     END");
 
             migrationBuilder.Sql(@"CREATE PROC usp_GetCoverType 
                                     @Id int 
                                     AS 
                                     BEGIN 
-                                     SELECT * FROM   dbo.CoverTypes  WHERE  (Id = @Id) 
+                                     SELECT * FROM   dbo.CoverType  WHERE  (Id = @Id) 
                                     END ");
 
             migrationBuilder.Sql(@"CREATE PROC usp_UpdateCoverType
@@ -24,7 +24,7 @@ namespace BulkyBook.DataAccess.Migrations
 	                                @Name varchar(100)
                                     AS 
                                     BEGIN 
-                                     UPDATE dbo.CoverTypes
+                                     UPDATE dbo.CoverType
                                      SET  Name = @Name
                                      WHERE  Id = @Id
                                     END");
@@ -33,7 +33,7 @@ namespace BulkyBook.DataAccess.Migrations
 	                                @Id int
                                     AS 
                                     BEGIN 
-                                     DELETE FROM dbo.CoverTypes
+                                     DELETE FROM dbo.CoverType
                                      WHERE  Id = @Id
                                     END");
 
@@ -41,9 +41,10 @@ namespace BulkyBook.DataAccess.Migrations
                                    @Name varchar(100)
                                    AS 
                                    BEGIN 
-                                    INSERT INTO dbo.CoverTypes(Name)
+                                    INSERT INTO dbo.CoverType(Name)
                                     VALUES (@Name)
                                    END");
+
 
         }
 
