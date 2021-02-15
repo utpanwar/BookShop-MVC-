@@ -12,7 +12,7 @@ namespace BulkyBook.Models
         [Display(Name="Category name")]
         [Required]
         [MaxLength(50)]
-        public int Name { get; set; }
+        public string Name { get; set; }
 
     }
 }

@@ -17,7 +17,7 @@ namespace BulkyBook.DataAccess.Repository
         {
             _db = db;
             Category = new CategoryRepositery(_db);
-            CoverType = new CoverTypeRepository(_db);
+            //CoverType = new CoverTypeRepository(_db);
             //Company = new CompanyRepository(_db);
             //Product = new ProductRepository(_db);
             //ApplicationUser = new ApplicationUserRepository(_db);

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BulkyBook.DataAccess.Repositery.IRepositery
 {
-    public class CoverTypeRepository : Repositery<CoverType>, ICoverTypeRepository
+    public class CoverTypeRepository : Repositery<CoverType> ,ICoverTypeRepository
     {
         private readonly ApplicationDbContext _db;
         public CoverTypeRepository(ApplicationDbContext db) : base(db)
