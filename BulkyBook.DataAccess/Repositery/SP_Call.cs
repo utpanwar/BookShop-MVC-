@@ -1,7 +1,6 @@
 ﻿
-
 using BookShop.DataAccess.Data;
-using BulkyBook.DataAccess.Repository.IRepository;
+using BulkyBook.DataAccess.Repositery.IRepositery;
 using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BulkyBook.DataAccess.Repository
+namespace BulkyBook.DataAccess.Repositery
 {
     public class SP_Call : ISP_Call
     {

@@ -3,15 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BulkyBook.DataAccess.Repository.IRepository
+namespace BulkyBook.DataAccess.Repositery.IRepositery
 {
     public interface IUnitOfWork : IDisposable
     {
          ICategoryRepositery Category { get; }
          ICoverTypeRepository CoverType { get; }
         IProductRepositery Product { get; }
-        //ICompanyRepository Company { get; }
-        //IApplicationUserRepository ApplicationUser { get; }
+        ICompanyRepositery Company { get; }
+        //IApplicationUserRepositery ApplicationUser { get; }
         ISP_Call SP_Call { get; } 
         //IShoppingCartRepository ShoppingCart { get; }
         //IOrderHeaderRepository OrderHeader { get; }

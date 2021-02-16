@@ -1,13 +1,12 @@
 ﻿using BookShop.DataAccess.Data;
 using BulkyBook.DataAccess.Repositery;
 using BulkyBook.DataAccess.Repositery.IRepositery;
-using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BulkyBook.DataAccess.Repository
+namespace BulkyBook.DataAccess.Repositery
 {
     public class UnitOfWork : IUnitOfWork
     {
@@ -18,7 +17,7 @@ namespace BulkyBook.DataAccess.Repository
             _db = db;
             Category = new CategoryRepositery(_db);
             CoverType = new CoverTypeRepository(_db);
-            //Company = new CompanyRepository(_db);
+            Company = new CompanyRepositery(_db);
             Product = new ProductRepositery(_db);
             //ApplicationUser = new ApplicationUserRepository(_db);
             SP_Call = new SP_Call(_db);
@@ -37,7 +36,7 @@ namespace BulkyBook.DataAccess.Repository
         //public Repositery<Category> MyPropertys { get ; set; }
 
 
-        //public ICompanyRepository Company { get; private set; }
+        public ICompanyRepositery Company { get; private set; }
         public IProductRepositery Product { get; private set; }
         public ICoverTypeRepository CoverType { get; private set; }
         //public IShoppingCartRepository ShoppingCart { get; private set; }

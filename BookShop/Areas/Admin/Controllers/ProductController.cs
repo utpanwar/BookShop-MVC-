@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using BulkyBook.DataAccess.Repository.IRepository;
+using BulkyBook.DataAccess.Repositery.IRepositery;
 using BulkyBook.Models;
 using BulkyBook.Models.ViewModels;
 using Microsoft.AspNetCore.Hosting;

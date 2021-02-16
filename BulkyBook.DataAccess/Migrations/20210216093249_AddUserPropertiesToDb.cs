@@ -6,52 +6,51 @@ namespace BulkyBook.DataAccess.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AddColumn<int>(
+               name: "CompanyId",
+               table: "AspNetUsers",
+               nullable: true);
+
             migrationBuilder.AddColumn<string>(
                 name: "City",
                 table: "AspNetUsers",
-                type: "nvarchar(max)",
                 nullable: true);
-
-            migrationBuilder.AddColumn<string>(
-                name: "Discriminator",
-                table: "AspNetUsers",
-                type: "nvarchar(max)",
-                nullable: false,
-                defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "Name",
                 table: "AspNetUsers",
-                type: "nvarchar(max)",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "PostalCode",
                 table: "AspNetUsers",
-                type: "nvarchar(max)",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "State",
                 table: "AspNetUsers",
-                type: "nvarchar(max)",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "StreetAddress",
                 table: "AspNetUsers",
-                type: "nvarchar(max)",
                 nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Discriminator",
+                table: "AspNetUsers",
+                nullable: false,
+                defaultValue: "");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "City",
+                name: "CompanyId",
                 table: "AspNetUsers");
 
             migrationBuilder.DropColumn(
-                name: "Discriminator",
+                name: "City",
                 table: "AspNetUsers");
 
             migrationBuilder.DropColumn(
@@ -68,6 +67,10 @@ namespace BulkyBook.DataAccess.Migrations
 
             migrationBuilder.DropColumn(
                 name: "StreetAddress",
+                table: "AspNetUsers");
+
+            migrationBuilder.DropColumn(
+                name: "Discriminator",
                 table: "AspNetUsers");
         }
     }

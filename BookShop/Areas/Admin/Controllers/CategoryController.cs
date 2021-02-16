@@ -1,5 +1,4 @@
-﻿using BulkyBook.DataAccess.Repository;
-using BulkyBook.DataAccess.Repository.IRepository;
+﻿using BulkyBook.DataAccess.Repositery.IRepositery;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;

@@ -1,7 +1,7 @@
 
 using BookShop.DataAccess.Data;
-using BulkyBook.DataAccess.Repository;
-using BulkyBook.DataAccess.Repository.IRepository;
+using BulkyBook.DataAccess.Repositery;
+using BulkyBook.DataAccess.Repositery.IRepositery;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
